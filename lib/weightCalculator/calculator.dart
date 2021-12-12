@@ -29,7 +29,7 @@ class Calculate {
     } else if (_bmi > 18.5) {
       return 'You have a normal body weight. Good Job!';
     } else {
-      return 'You have a lower thn normal body weight. You can eat a bit more.';
+      return 'You have a lower than normal body weight. You can eat a bit more.';
     }
   }
 }

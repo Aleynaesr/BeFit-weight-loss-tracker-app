@@ -19,16 +19,18 @@ class InputPage extends StatefulWidget {
 class _InputPageState extends State<InputPage> {
 
   Gender activeGender = Gender.male;
-  int height = 120;
-  int weight = 45;
+  int height = 150;
+  int weight = 50;
   int age = 20;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("BMICalculator"),
-          elevation: 0,
+          backgroundColor: Colors.white,
+          title: Text("Body Mass Index Calculator", style: TextStyle(color:Colors.black,
+            ),),
+          elevation: 0.50,
         ),
         body: Column(
           children: [
@@ -41,9 +43,9 @@ class _InputPageState extends State<InputPage> {
                       child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Icon(FontAwesomeIcons.mars,size: 80,),
+                            Icon(FontAwesomeIcons.mars,size: 50, color: Colors.white,),
                             SizedBox(
-                              height: 15,
+                              height: 10,
                             ),
                             Text('MALE', style: kLabelTextStyle,)
                           ]
@@ -62,9 +64,9 @@ class _InputPageState extends State<InputPage> {
                       child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Icon(FontAwesomeIcons.venus,size: 80,),
+                            Icon(FontAwesomeIcons.venus,size: 50, color: Colors.white,),
                             SizedBox(
-                              height: 15,
+                              height: 10,
                             ),
                             Text('FEMALE', style: kLabelTextStyle,)
                           ]
@@ -88,7 +90,7 @@ class _InputPageState extends State<InputPage> {
                   children: [
 
                     SizedBox(
-                      height: 15,
+                      height: 5,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -103,15 +105,15 @@ class _InputPageState extends State<InputPage> {
                       ],
                     ),
                     SizedBox(
-                      height: 15,
+                      height: 10,
                     ),
 
                     SliderTheme(
                       data: SliderTheme.of(context).copyWith(
                         thumbColor: kBottomContainerColor,
                         activeTrackColor: Colors.white,
-                        thumbShape: RoundSliderThumbShape(enabledThumbRadius: 15.0),
-                        overlayShape: RoundSliderOverlayShape(overlayRadius: 30.0),
+                        thumbShape: RoundSliderThumbShape(enabledThumbRadius: 10.0),
+                        overlayShape: RoundSliderOverlayShape(overlayRadius: 10.0),
                         trackHeight: 1,
                       ),
                       child: Slider(
@@ -146,14 +148,14 @@ class _InputPageState extends State<InputPage> {
                           Text('WEIGHT',
                             style: kLabelTextStyle,),
                           SizedBox(
-                            height: 10,
+                            height: 5,
                           ),
                           Text(
                             weight.toString(),
                             style: kNumberTextStyle,
                           ),
                           SizedBox(
-                            height: 10,
+                            height: 5,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -168,7 +170,7 @@ class _InputPageState extends State<InputPage> {
                                   }
                               ),
                               SizedBox(
-                                width: 10,
+                                width: 5,
                               ),
                               RoundIconButton(
                                   icon: Icon(FontAwesomeIcons.plus, color: Colors.white,),
@@ -195,14 +197,14 @@ class _InputPageState extends State<InputPage> {
                           Text('AGE',
                             style: kLabelTextStyle,),
                           SizedBox(
-                            height: 10,
+                            height: 5,
                           ),
                           Text(
                             age.toString(),
                             style: kNumberTextStyle,
                           ),
                           SizedBox(
-                            height: 10,
+                            height: 5,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -217,7 +219,7 @@ class _InputPageState extends State<InputPage> {
                                   }
                               ),
                               SizedBox(
-                                width: 10,
+                                width: 5,
                               ),
                               RoundIconButton(
                                   icon: Icon(FontAwesomeIcons.plus, color: Colors.white,),
@@ -255,14 +257,14 @@ class _InputPageState extends State<InputPage> {
               child: Container(
                 width: double.infinity,
                 height: kBottomContainerHeight,
-                margin: EdgeInsets.only(top: 10),
-                padding: EdgeInsets.only(bottom: 10),
+                margin: EdgeInsets.only(top: 5),
+                padding: EdgeInsets.only(bottom: 5),
                 color: kBottomContainerColor,
                 child: Center(
 
                   child: Text('Calculate',
-                    style: TextStyle(fontWeight: FontWeight.bold,
-                        fontSize: 35),),
+                    style: TextStyle(fontWeight: FontWeight.bold,color:Colors.white,
+                        fontSize: 25),),
                 ),
               ),
             )
@@ -292,8 +294,8 @@ class RoundIconButton extends StatelessWidget {
         onTap();
       },
       constraints: BoxConstraints.tightFor(
-        width: 56,
-        height: 56,
+        width: 38,
+        height: 38,
       ),
       elevation: 7,
     );
