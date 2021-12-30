@@ -2,6 +2,8 @@
 
 It is a basic flutter app for weight los tracking written in Flutter.
 
+## https://play.google.com/store/apps/details?id=com.aleynaeser.weight_loss_tracker
+
 <h4 align="center">
 1. Home Screen
 </h4> 
